@@ -1,0 +1,9 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Java",
+      "description": "Java is a high level programming language"
+    }
+  ]
+}

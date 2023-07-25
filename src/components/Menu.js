@@ -7,7 +7,7 @@ export const Menu = () => {
             <ListGroup>
                 <ListGroupItem><Link to='/' className='text-decoration-none text-dark'>Home</Link></ListGroupItem>
                 <ListGroupItem><Link to='addcourse' className='text-decoration-none text-dark'>Add Course</Link></ListGroupItem>
-                <ListGroupItem><Link className='text-decoration-none text-dark'>View Course</Link></ListGroupItem>
+                <ListGroupItem><Link to='allcourses' className='text-decoration-none text-dark'>View Courses</Link></ListGroupItem>
                 <ListGroupItem><Link className='text-decoration-none text-dark'>About</Link></ListGroupItem>
                 <ListGroupItem><Link className='text-decoration-none text-dark'>Contact</Link></ListGroupItem>
             </ListGroup>

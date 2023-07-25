@@ -2,16 +2,24 @@ import React, { useState } from 'react'
 import { Container, Form, FormGroup, Input, Label } from 'reactstrap'
 import { Fragment } from 'react'
 import { Button } from 'reactstrap'
+import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify'
 
 export const AddCourse = () => {
-
     const [course, setCourse] = useState({
-        id:'',
-        title:'',
-        description:''
+        id: '',
+        title: '',
+        description: ''
     })
-    const handleForm = () => {
-        
+    const handleForm = (e) => {
+        e.preventDefault()
+        axios.post('http://localhost:3001/courses', {
+            id: course.id,
+            title: course.title,
+            description: course.description
+        })
+            .then(response => toast.success("Added Successfully.."))
+            .catch(error=>toast.error("Couldnot add course"))
     }
     return (
         <Fragment>
@@ -48,6 +56,7 @@ export const AddCourse = () => {
                         onClick={() => setCourse({ id: '', title: '', description: '' })}>Clear</Button>
                 </Container>
             </Form>
+            <ToastContainer/>
         </Fragment>
     )
 }

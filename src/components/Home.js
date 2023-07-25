@@ -8,7 +8,6 @@ export const Home = () => {
             <CardBody>This is developed by Advanced Auto Parts for learning purpose backend is on spring boot and frontend on reactjs
             </CardBody>
             <CardText><Button color='primary' outline>Start Using</Button></CardText>
-            
         </Card>
     )
 }

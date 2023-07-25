@@ -9,6 +9,8 @@ import { Routes } from 'react-router-dom';
 import { Home } from './components/Home';
 import { AddCourse } from './components/AddCourse';
 import { Fragment } from 'react';
+import { ViewCourses } from './components/ViewCourses';
+import 'react-toastify/dist/ReactToastify.css'
 function App() {
   return (
     <div className="App">
@@ -22,6 +24,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='addcourse' element={<AddCourse/>}/>
+              <Route path='allcourses' element={<ViewCourses/>}/>
             </Routes>
           </Col>
         </Row>
