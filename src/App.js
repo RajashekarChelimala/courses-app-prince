@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 
+import {NavBar} from './components/NavBar.js'
+import { Menu } from './components/Menu';
+import { Container,Row,Col } from 'reactstrap';
+import { Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { Home } from './components/Home';
+import { AddCourse } from './components/AddCourse';
+import { Fragment } from 'react';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Fragment>
+        <Row>
+          <Col md='4'>
+            <Menu/>
+          </Col>
+          <Col md='8'>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='addcourse' element={<AddCourse/>}/>
+            </Routes>
+          </Col>
+        </Row>
+      </Fragment>
     </div>
   );
 }
